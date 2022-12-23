@@ -45,6 +45,13 @@ sauceButton.addEventListener("click", () => {
 });
 document.body.appendChild(sauceButton);
 
+const toppingsButton = document.createElement("button");
+toppingsButton.textContent = "Generate random toppings";
+toppingsButton.addEventListener("click", () => {
+  console.log(`Your toppings are: ${getRandomToppings(3).join(", ")}`);
+});
+document.body.appendChild(toppingsButton);
+
 function Pizza() {
   return <div>pizza</div>;
 }
