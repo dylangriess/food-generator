@@ -38,6 +38,13 @@ function generatePizza() {
 
 generatePizza();
 
+const sauceButton = document.createElement("button");
+sauceButton.textContent = "Generate random sauce";
+sauceButton.addEventListener("click", () => {
+  console.log(`Your sauce is: ${getRandomSauce()}`);
+});
+document.body.appendChild(sauceButton);
+
 function Pizza() {
   return <div>pizza</div>;
 }
