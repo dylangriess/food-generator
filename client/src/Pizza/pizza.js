@@ -13,8 +13,20 @@ const toppings = [
   "tomatoes",
 ];
 
-function pizza() {
+function getRandomSauce() {
+  return sauces[Math.floor(Math.random() * sauces.length)];
+}
+
+function getRandomToppings(numToppings) {
+  const toppingsArray = [];
+  for (let i = 0; i < numToppings; i++) {
+    toppingsArray.push(toppings[Math.floor(Math.random() * toppings.length)]);
+  }
+  return toppingsArray;
+}
+
+function Pizza() {
   return <div>pizza</div>;
 }
 
-export default pizza;
+export default Pizza;
