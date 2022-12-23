@@ -25,6 +25,17 @@ function getRandomToppings(numToppings) {
   return toppingsArray;
 }
 
+function generatePizza() {
+  const numToppings = Math.floor(Math.random() * (toppings.length + 1));
+  const sauce = getRandomSauce();
+  const toppings = getRandomToppings(numToppings);
+  console.log(
+    `Your pizza has ${sauce} sauce and the following toppings: ${toppings.join(
+      ", "
+    )}.`
+  );
+}
+
 function Pizza() {
   return <div>pizza</div>;
 }
