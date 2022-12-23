@@ -26,7 +26,9 @@ function getRandomToppings(numToppings) {
 }
 
 function generatePizza() {
-  const numToppings = Math.floor(Math.random() * (toppings.length + 1));
+  const numToppings = Math.floor(
+    Math.random() * (availableToppings.length + 1)
+  );
   const sauce = getRandomSauce();
   const toppings = getRandomToppings(numToppings);
   console.log(
