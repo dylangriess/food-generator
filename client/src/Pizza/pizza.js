@@ -36,6 +36,8 @@ function generatePizza() {
   );
 }
 
+generatePizza();
+
 function Pizza() {
   return <div>pizza</div>;
 }
