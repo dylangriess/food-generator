@@ -31,11 +31,55 @@ function generatePizza() {
   );
   const sauce = getRandomSauce();
   const toppings = getRandomToppings(numToppings);
+  const pizzaName = generatePizzaName(sauce, toppings);
   console.log(
-    `Your pizza has ${sauce} sauce and the following toppings: ${toppings.join(
+    `Your pizza, "${pizzaName}", has ${sauce} sauce and the following toppings: ${toppings.join(
       ", "
     )}.`
   );
+}
+
+function generatePizzaName(sauce, toppings) {
+  let pizzaName = "";
+  if (sauce === "marinara") {
+    pizzaName += "Marinara";
+  } else if (sauce === "alfredo") {
+    pizzaName += "Alfredo";
+  } else if (sauce === "pesto") {
+    pizzaName += "Pesto";
+  } else if (sauce === "bbq") {
+    pizzaName += "BBQ";
+  } else if (sauce === "garlic oil") {
+    pizzaName += "Garlic Oil";
+  }
+  if (toppings.includes("pepperoni")) {
+    pizzaName += " Pepperoni";
+  }
+  if (toppings.includes("sausage")) {
+    pizzaName += " Sausage";
+  }
+  if (toppings.includes("mushrooms")) {
+    pizzaName += " Mushroom";
+  }
+  if (toppings.includes("onions")) {
+    pizzaName += " Onion";
+  }
+  if (toppings.includes("bell peppers")) {
+    pizzaName += " Bell Pepper";
+  }
+  if (toppings.includes("olives")) {
+    pizzaName += " Olive";
+  }
+  if (toppings.includes("pineapple")) {
+    pizzaName += " Pineapple";
+  }
+  if (toppings.includes("spinach")) {
+    pizzaName += " Spinach";
+  }
+  if (toppings.includes("tomatoes")) {
+    pizzaName += " Tomato";
+  }
+  return pizzaName;
 }
 
 generatePizza();
