@@ -40,6 +40,29 @@ function generatePizza() {
 
 generatePizza();
 
+// Create checkboxes for each topping
+const toppingsContainer = document.createElement("div");
+toppings.forEach((topping) => {
+  const toppingCheckbox = document.createElement("input");
+  toppingCheckbox.type = "checkbox";
+  toppingCheckbox.value = topping;
+  toppingCheckbox.addEventListener("change", () => {
+    if (toppingCheckbox.checked) {
+      availableToppings.push(topping);
+    } else {
+      availableToppings = availableToppings.filter((t) => t !== topping);
+    }
+  });
+  toppingsContainer.appendChild(toppingCheckbox);
+
+  const toppingLabel = document.createElement("label");
+  toppingLabel.textContent = topping;
+  toppingsContainer.appendChild(toppingLabel);
+
+  toppingsContainer.appendChild(document.createElement("br"));
+});
+document.body.appendChild(toppingsContainer);
+
 const sauceButton = document.createElement("button");
 sauceButton.textContent = "Generate random sauce";
 sauceButton.addEventListener("click", () => {
