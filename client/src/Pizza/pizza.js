@@ -1,7 +1,7 @@
 import React from "react";
 
 const sauces = ["marinara", "alfredo", "pesto", "bbq", "garlic oil"];
-const availableToppings = [
+const toppings = [
   "pepperoni",
   "sausage",
   "mushrooms",
@@ -122,7 +122,7 @@ toppingsButton.addEventListener("click", () => {
 document.body.appendChild(toppingsButton);
 
 function Pizza() {
-  return <div>pizza</div>;
+  return <div>{toppings}</div>;
 }
 
 export default Pizza;
