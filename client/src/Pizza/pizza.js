@@ -1,7 +1,7 @@
 import React from "react";
 
 const sauces = ["marinara", "alfredo", "pesto", "bbq", "garlic oil"];
-const toppings = [
+const availableToppings = [
   "pepperoni",
   "sausage",
   "mushrooms",
