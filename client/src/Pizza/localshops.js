@@ -7,6 +7,7 @@ function localshops() {
   location = location_response.json();
   latitude = location["location"]["lat"];
   longitude = location["location"]["lng"];
+
   maps_response = requests.get(
     "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={latitude},{longitude}&radius=5000&type=pizza&key=YOUR_API_KEY"
   );
